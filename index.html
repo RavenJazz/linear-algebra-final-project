@@ -13,25 +13,25 @@
     <!-- CSS -->
 	<link rel="stylesheet" href="style.css">
 </head>
-<body>
+	
+	<!--BUTTONS FOR SVD AND RREF-->
+	<button id="btnSVD">Compute SVD Subspaces</button>
+	<button id="btnRREF">Compute RREF Subspaces</button>
 
-	<img src="images/MAIN PAGE BG.png" alt="background">
-
-	<input type="number" id="num1" placeholder="Enter a number">
-	<button id="btn()">Complete Square</button>
-
-	<p id="output"></p>
+	<!--OUTPUT AREA-->
+	<pre id="output"></pre>
 
     <!-- Executes the python file -->
-    <script type="py" src="calculations.py" 
+    <script type="py" src="calculations_svd.py" 
 		config='{ "packages": ["numpy"] }'></script>
 
-	<!-- Load Oython logic-->
-	<script type="py" src="calculations.py"
-		config='{"pacages": ["numpy"] }'></script>
+	<script type="py" src="calculations_rref.py"
+		config='{"packages": ["numpy"] }'></script>
 
 	<script>
-		document.getElementById("btn").addEventListener("click", () => {square();
+		document.getElementById("btnSVD").addEventListener("click", () => {compute_svd();
+																	   })
+		document.getElementById("btnRREF").addEventListener("click", () => {compute_rref();
 																	   })
 	</script>
 
