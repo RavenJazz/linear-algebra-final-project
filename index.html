@@ -14,9 +14,24 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+	<input type="number" id="num1" placeholder="Enter a number">
+	<button id="btn()">Complete Square</button>
+
+	<p id="output"></p>
+
     <!-- Executes the python file -->
-    <script type="py" src="calculations.py" config='{ "packages": ["numpy"] }'></script>
+    <script type="py" src="calculations.py" 
+		config='{ "packages": ["numpy"] }'></script>
+
+	<!-- Load Oython logic-->
+	<script type="py" src="calculations.py"
+		config='{"pacages": ["numpy"] }'></script>
+
+	<script>
+		document.getElementById("btn").addEventListener("click", () => {square();
+																	   })
+	</script>
 
 </body>
 </html>
