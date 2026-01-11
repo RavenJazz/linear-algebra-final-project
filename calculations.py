@@ -55,9 +55,33 @@ def ref_to_rref(R):
             R[u] -= R[u, pj] * R[i]
     return R
 
+
+def row_space(A, Acopy):
+    R = ref_to_rref(row_echelon(A))
+    rows, cols = R.shape
+    basis = []
+    checker = True
+    for i in range(cols):
+        for j in range(rows):
+            if R[j, i] > 1:
+                checker = False
+                break
+        if checker == True:
+            basis.append(Acopy[:,i])
+        checker = True
+    basis = np.array(basis).transpose()
+    return basis
+            
+
 A = np.array([[4, 7, 3, 8],
               [8, 3, 8, 7],
               [2, 9, 5, 3]], dtype='float')
+Acopy = A.copy()
 
-row_echelon(A)
-print(ref_to_rref(A))
+
+print(A)
+B = ref_to_rref(row_echelon(A))
+print(B)
+C = row_space(A, Acopy)
+print(C)
+
