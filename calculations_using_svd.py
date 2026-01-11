@@ -1,4 +1,3 @@
-from pyscript import display
 import numpy as np
 
 def fundamental_subspaces(A, tol=1e-10):
