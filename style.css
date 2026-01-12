@@ -88,6 +88,22 @@ a {
     font-weight: 200;
 }
 
-.btnRREF:hover {
-    transform: scale(1.05); /* Slight pop when hovering */
+footer {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-family: "Pridi", serif;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 10px;
 }
+
+#group {
+    float: left;
+}
+
+.btncalc:hover {
+    transform: scale(1.05);
+	background-color: #6EE48C;
+    color: black;
+}
+
