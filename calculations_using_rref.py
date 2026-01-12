@@ -1,4 +1,6 @@
+from pyscript import document, display, window
 import numpy as np
+import json
 
 # --- Functions to get the ref and rref ---
 def row_echelon(A):
@@ -70,17 +72,35 @@ def calculate_all_subspaces(A):
     return col_space, row_space, null_space, left_null_space
 
 
-# --- Execution ---
-A = np.array([[1, 2, 3, 1],
-              [1, 1, 2, 1],
-              [1, 2, 3, 1]], dtype='float')
+# --- New Changes Here ---
+# --- Main Execution ---
+def load_matrix_and_display():
+    # 1. Access the Browser's LocalStorage via the 'window' object
+    storage = window.localStorage
+    
+    rows = int(storage.getItem('matrix_rows'))
+    cols = int(storage.getItem('matrix_cols'))
+    # Parse the JSON string back into a Python list
+    data_raw = json.loads(storage.getItem('matrix_data'))
+    
+    # 2. Reconstruct the NumPy Matrix
+    A = np.array(data_raw, dtype=float).reshape(rows, cols)
 
-rref_A = ref_to_rref(row_echelon(A.copy()))[0]
-c_s, r_s, n_s, ln_s = calculate_all_subspaces(A)
+    # 3. Perform Calculations
+    c_s, r_s, n_s, ln_s = calculate_all_subspaces(A)
 
-# --- Prints the values ---
-print("--- RREF of A: ---\n", rref_A)
-print("\n--- Column Space --- \n", c_s)
-print("\n--- Row Space --- \n", r_s)
-print("\n--- Null Space --- \n", n_s)
-print("\n--- Left Null Space --- \n", ln_s)
+    # 4. Helper to format for display
+    def pretty_print(arr):
+        if arr.size == 0: return "None (Zero Vector Only)"
+        return np.array2string(np.round(arr, 2), separator=', ')
+
+    # 5. DISPLAY results to your HTML IDs
+    display(pretty_print(A), target="matrix-input")
+    display(pretty_print(c_s), target="column-space")
+    display(pretty_print(n_s), target="null-space")
+    display(pretty_print(r_s), target="row-space")
+    display(pretty_print(ln_s), target="left-null-space")
+
+# Run the function immediately when the page loads
+load_matrix_and_display()
+# --- End of Changes ---

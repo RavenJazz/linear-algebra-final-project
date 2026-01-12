@@ -23,18 +23,23 @@
       <!---Heading-->
       <h1>Four Fundamental Spaces Finder</h1><br>
       <h2>Matrix A</h2>
-      <input type="text" value="1">
+      <div id="matrix-input"></div>
   
       <!--Outputs here -->
       <p id="desc">The four fundamental spaces of Matrix A are the following:</p><br>
       <p>Column Space</p><br>
+      <div id="column-space"></div>
       
       <p>Null Space</p><br>
-      
+      <div id="null-space"></div>
+
       <p>Row Space</p><br>
-      
+      <div id="row-space"></div>
+
       <p>Left Null Space</p><br>
-  
+      <div id="left-null-space"></div>
+
+      <script type="py" src="calculations_using_rref.py" config='{"packages": ["numpy"] }'></script>
       <!-- Buttons -->
       <a href="main.html">Back to Home</a>
       <a href="input.html">Back to Calculator</a>

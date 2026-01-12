@@ -41,7 +41,8 @@
       <div id="matrixContainer" class="matrix-grid"></div>
 
       <div class="actions">
-          <a href="output.html" class="btn">Calculate</a>
+          <!-- changed from 'a' to button -->
+          <button href="output.html" class="btn" onclick="saveAndCalculate()" id="calculateButton">Calculate</button>
           <button id="clearButton" type="button" onclick="clearMatrix()">Clear Values</button>
       </div>
     </div>
@@ -73,6 +74,25 @@
               }
           }
       }
+
+      // Changes I made Here
+      function saveAndCalculate() {
+        const rows = document.getElementById('rowInput').value;
+        const cols = document.getElementById('colInput').value;
+        const inputs = document.querySelectorAll('.matrix-input');
+        
+        // Collect values into an array
+        const matrixData = Array.from(inputs).map(el => el.value || 0);
+
+        // Store in localStorage (Memory)
+        localStorage.setItem('matrix_rows', rows);
+        localStorage.setItem('matrix_cols', cols);
+        localStorage.setItem('matrix_data', JSON.stringify(matrixData));
+
+        // Redirect to the output page
+        window.location.href = "output.html"; 
+    }
+        // End of Changes
 
       // Listen for changes in both inputs
       rowInput.addEventListener('input', generateMatrix);
