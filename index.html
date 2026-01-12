@@ -33,23 +33,23 @@
 
 <div class="card-container">
 		<div class="card yellow">
-		<h2>Column Space</h2>
-		<p>This space consists of all possible linear combinations of the columns of A. It represents the set of all vectors b for which the system Ax = b has a solution.</p>
+			<h2>Column Space</h2>
+			<p>This space consists of all possible linear combinations of the columns of A. It represents the set of all vectors b for which the system Ax = b has a solution.</p>
 		</div>
 	
 		<div class="card red">
-		<h2>Null Space</h2>
-		<p>The null space contains all vectors x that satisfy the equation Ax = 0. It describes the relationships and dependencies between the columns of the matrix.</p>
+			<h2>Null Space</h2>
+			<p>The null space contains all vectors x that satisfy the equation Ax = 0. It describes the relationships and dependencies between the columns of the matrix.</p>
 		</div>
 	
 		<div class="card blue">
-		<h2>Row Space</h2>
-		<p>This is the span of all the row vectors of A, or the column space of A transposed. It occupies the same dimension as the column space, representing the "rank" of the matrix.</p>
+			<h2>Row Space</h2>
+			<p>This is the span of all the row vectors of A, or the column space of A transposed. It occupies the same dimension as the column space, representing the "rank" of the matrix.</p>
 		</div>
 		
 		<div class="card purple">
-		<h2>Left Null Space</h2>
-		<p>This space consists of all vectors y such that A^Ty = 0 (or y^TA = 0). It is the orthogonal complement to the column space and helps describe the constraints on the output space.</p>
+			<h2>Left Null Space</h2>
+			<p>This space consists of all vectors y such that A^Ty = 0 (or y^TA = 0). It is the orthogonal complement to the column space and helps describe the constraints on the output space.</p>
 		</div>
 </div>
 </div>
@@ -58,7 +58,6 @@
 <br>
 <br>
 
-	
 	<!--BUTTONS FOR RREF-->
 
 	<a href="matrix.html" class="btncalc">Go to Calculator</a>
@@ -70,11 +69,6 @@
 
 	<!--OUTPUT AREA-->
 	<pre id="output"></pre>
-
-    <!-- Executes the python file -->
-
-	<script type="py" src="calculations_rref.py"
-		config='{"packages": ["numpy"] }'></script>
 
 	<script>
 		document.getElementById("btnRREF").addEventListener("click", () => {compute_rref();
