@@ -27,23 +27,62 @@
       <!--rows & cols-->
       <form>
         <div id="rows">
-            <label for="rows">Number of Rows:</label>
-            <input type="text" name="rows">
+            <label for="rowInput">Number of Rows:</label>
+            <input type="number" id="rowInput" min="1" max="5" placeholder="1" name="rows">
         </div>
         <div id="cols">
-            <label for="cols">Number of Columns:</label>
-            <input type="text" name="cols">
+            <label for="colInput">Number of Columns:</label>
+            <input type="number" id="colInput" min="1" max="5" placeholder="1" name="cols">
         </div>
       </form>
   
       <!-- input boxes -->
       <h4>Matrix A</h4>
-      <form>
-        <input type="text" name="inputBox"><br>
-        <a href="output.html">Calculate</a>
-        <button id="clearButton" type="reset">Clear Values</button>
-      </form>
+      <div id="matrixContainer" class="matrix-grid"></div>
+
+      <div class="actions">
+          <a href="output.html" class="btn">Calculate</a>
+          <button id="clearButton" type="button" onclick="clearMatrix()">Clear Values</button>
+      </div>
     </div>
+
+    <!-- JavaScript logic for matrix input -->
+    <script>
+      const rowInput = document.getElementById('rowInput');
+      const colInput = document.getElementById('colInput');
+      const container = document.getElementById('matrixContainer');
+
+      function generateMatrix() {
+          const rows = parseInt(rowInput.value);
+          const cols = parseInt(colInput.value);
+
+          // Clear previous matrix
+          container.innerHTML = '';
+
+          if (rows > 0 && cols > 0) {
+              // Set the grid columns dynamically
+              container.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+
+              // Create rows * cols number of input boxes
+              for (let i = 0; i < rows * cols; i++) {
+                  const input = document.createElement('input');
+                  input.type = 'number';
+                  input.className = 'matrix-input';
+                  input.placeholder = '0';
+                  container.appendChild(input);
+              }
+          }
+      }
+
+      // Listen for changes in both inputs
+      rowInput.addEventListener('input', generateMatrix);
+      colInput.addEventListener('input', generateMatrix);
+
+      function clearMatrix() {
+          container.innerHTML = '';
+      }
+    </script>
+
 </body>
 
     <footer>
