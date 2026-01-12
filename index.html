@@ -8,15 +8,73 @@
     <!-- This part pulls PyScript logic to html -->
     <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
     <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Pridi:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- -------------------------------------- -->
 
     <!-- CSS -->
 	<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+	<style>
+	body{
+	background-image: url('images/main-bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	}
+	</style>
+
+<div class="main-wrapper">
+	<h1 class="big-title">Four Fundamental Spaces Finder</h1>
+	<p class="subtitle"> A calculator to help you solve for the four fundamental spaces in Linear Algebra.</p>
+
+<div class="card-container">
+		<div class="card yellow">
+		<h2>Column Space</h2>
+		<p>This space consists of all possible linear combinations of the columns of A. It represents the set of all vectors b for which the system Ax = b has a solution.</p>
+		</div>
+	
+		<div class="card red">
+		<h2>Null Space</h2>
+		<p>The null space contains all vectors x that satisfy the equation Ax = 0. It describes the relationships and dependencies between the columns of the matrix.</p>
+		</div>
+	
+		<div class="card blue">
+		<h2>Row Space</h2>
+		<p>This is the span of all the row vectors of A, or the column space of A transposed. It occupies the same dimension as the column space, representing the "rank" of the matrix.</p>
+		</div>
+		
+		<div class="card purple">
+		<h2>Left Null Space</h2>
+		<p>This space consists of all vectors y such that A^Ty = 0 (or y^TA = 0). It is the orthogonal complement to the column space and helps describe the constraints on the output space.</p>
+		</div>
+</div>
+</div>
+
+<br>
+<br>
+<br>
+
+	
+	<!--BUTTONS FOR RREF-->
+
+	<a href="rrefcalc.html" class="btnRREF">Go to Calculator</a>
+
+	<!--OUTPUT AREA-->
+	<pre id="output"></pre>
+
     <!-- Executes the python file -->
-    <script type="py" src="calculations.py" config='{ "packages": ["numpy"] }'></script>
+
+	<script type="py" src="calculations_rref.py"
+		config='{"packages": ["numpy"] }'></script>
+
+	<script>
+		document.getElementById("btnRREF").addEventListener("click", () => {compute_rref();
+																	   })
+	</script>
 
 </body>
 </html>
