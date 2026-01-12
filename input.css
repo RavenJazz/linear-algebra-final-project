@@ -74,7 +74,7 @@ input {
     padding: 10px;
 }
 
-a {
+#calculateButton {
     display: inline-block;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -109,12 +109,6 @@ button {
     font-style: normal;
     font-weight: 200;
     text-decoration: none;
-}
-
-a:hover {
-    transform: scale(1.05);
-    background-color: #6EE48C;
-    color: black;
 }
 
 button:hover {
