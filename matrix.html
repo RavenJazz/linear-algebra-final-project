@@ -15,25 +15,29 @@
         <!-- -------------------------------------- -->
 
         <!-- CSS -->
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="matrix.css">
     </head>
 
     <body>
-        <div class="card-container">
-            <h1>Four Fundamental Spaces Finder</h1><br>
-            <p>Enter the matrix dimensions below and click “Generate Matrix”.</p><br>
+        <div class="card">
+            <!-- Heading -->
+            <h1>Four Fundamental Spaces Finder</h1>
+            <p id="desc">Enter the matrix dimensions below and click “Generate Matrix”.</p>
 
+            <!-- Inputs here -->
             <form>
-                <label for="rows">Number of Rows: </label>
+                <label for="rows" class="content">Number of Rows: </label>
                 <input type="text" name="rows"><br>
-                <label for="cols">Number of Columns: </label>
+                <label for="cols" class="content">Number of Columns: </label>
                 <input type="text" name="cols"><br>
-                <a href="input.html">
-                    <button class="btnInput">Generate Matrix</button>
-                </a>
+                <a href="input.html">Generate Matrix</a>
             </form>
         </div>
     </body>
 
+    <footer>
+            <p id="group">Group 4 | BSCS 2-3</p>
+            <p id="members">Alegre | Inocentes | Rumbaoa | Velasco | Vinoya</p>
+    </footer>
     
 </html>
