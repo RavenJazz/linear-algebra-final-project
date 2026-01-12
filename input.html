@@ -1,31 +1,54 @@
-<html>
+<!DOCTYPE html>
+
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generate Matrix | Four Fundamental Spaces Finder</title>
+
+    <!-- This part pulls PyScript logic to html -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Pridi:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- -------------------------------------- -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="input.css">
   </head>
 
-  <body>
-    <div>
+<body>
+    <div class="card">
       <!---heading-->
       <h1>Four Fundamental Spaces Finder</h1>
-      <p>Input the values below:</p><br>
+      <p id="desc">Input the values below:</p><br>
   
       <!--rows & cols-->
       <form>
-        <label for="rows">Number of Rows:</label>
-        <input type="text" name="rows"><br> <!-- idunno pano ilalagay user input here as value huhu -->
-        <label for="cols">Number of Columns:</label>
-        <input type="text" name="cols"> <!-- same here -->
+        <div id="rows">
+            <label for="rows">Number of Rows:</label>
+            <input type="text" name="rows">
+        </div>
+        <div id="cols">
+            <label for="cols">Number of Columns:</label>
+            <input type="text" name="cols">
+        </div>
       </form>
   
       <!-- input boxes -->
       <h4>Matrix A</h4>
       <form>
         <input type="text" name="inputBox"><br>
-        <button class="buttons" type="button">Calculate Using SVD</button>
-        <button class="buttons" type="button">Calculate Using RREF</button>
+        <a href="output.html">Calculate</a>
         <button id="clearButton" type="reset">Clear Values</button>
       </form>
     </div>
-  </body>
+</body>
+
+    <footer>
+        <p id="group">Group 4 | BSCS 2-3</p>
+        <p id="members">Alegre | Inocentes | Rumbaoa | Velasco | Vinoya</p>
+    </footer>
 
 </html>
