@@ -1,0 +1,116 @@
+body {
+    text-align: center;
+    background-image: url(OUTPUT\ BG.jpg);
+    background-size: cover;
+}
+
+.card {
+    max-width: 1300px;
+    min-height: 500px;
+    padding: 12px;
+    margin: 80px;
+    background-image: linear-gradient(to bottom, #FFFFFF, #E4E4E4);
+    border-radius: 32px;
+    box-shadow: 3px 3px 3px gray;
+}
+
+h1 {
+    text-align: center;
+    font-family: "PT Serif", serif;
+    font-style: normal;
+    font-size: 70px;
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-family: "PT Serif", serif;
+    font-style: normal;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.matrix-input {
+    width: 50px;            
+    height: 50px;
+    text-align: center;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px; 
+}
+
+.matrix-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 10px;
+    width: fit-content;
+    margin: 20px auto;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    padding: 10px;
+}
+
+#desc {
+    text-align: center;    
+    font-family: "Pridi", serif;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 35px;
+    margin-bottom: 5px;
+    margin-top: 20;
+    color: rgb(173, 0, 0);
+}
+
+p {
+    font-family: "Pridi", serif;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 10px;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: black;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+    font-family: "PT Serif", serif;
+    font-style: normal;
+    font-weight: 200;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+a:hover {
+    transform: scale(1.05);
+    background-color: #CE79F9;
+    color: black;
+}
+
+footer {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-family: "Pridi", serif;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 10px;
+}
+
+#group {
+    float: left;
+}
+
+#members {
+    float: right;
+}
