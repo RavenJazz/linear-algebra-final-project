@@ -66,6 +66,7 @@ a {
     font-family: "PT Serif", serif;
     font-style: normal;
     font-weight: 200;
+    text-decoration: none;
 }
 
 a:hover {
