@@ -19,25 +19,36 @@
   </head>
 
   <body>
-    <div class="card">
+    <div class="card1">
       <!---Heading-->
       <h1>Four Fundamental Spaces Finder</h1><br>
       <h2>Matrix A</h2>
       <div id="matrix-input"></div>
   
       <!--Outputs here -->
-      <p id="desc">The four fundamental spaces of Matrix A are the following:</p><br>
-      <p>Column Space</p><br>
-      <div id="column-space"></div>
-      
-      <p>Null Space</p><br>
-      <div id="null-space"></div>
+      <p id="desc">The four fundamental spaces of Matrix A are the following:</p>
 
-      <p>Row Space</p><br>
-      <div id="row-space"></div>
-
-      <p>Left Null Space</p><br>
-      <div id="left-null-space"></div>
+<div class="card-container">
+		<div class="card yellow">
+			<h2>Column Space</h2>
+			<div id="column-space"></div>
+		</div>
+	
+		<div class="card red">
+			<h2>Null Space</h2>
+			<div id="null-space"></div>
+		</div>
+	
+		<div class="card blue">
+			<h2>Row Space</h2>
+			<div id="row-space"></div>
+		</div>
+		
+		<div class="card purple">
+			<h2>Left Null Space</h2>
+			<div id="left-null-space"></div>
+		</div>
+</div>
 
       <script type="py" src="calculations_using_rref.py" config='{"packages": ["numpy"] }'></script>
       <!-- Buttons -->
