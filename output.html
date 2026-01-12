@@ -5,17 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Four Fundamental Spaces Finder</title>
+
+    <!-- This part pulls PyScript logic to html -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Pridi:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- -------------------------------------- -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="output.css">
   </head>
 
   <body>
-    <div>
+    <div class="card">
       <!---Heading-->
       <h1>Four Fundamental Spaces Finder</h1><br>
-      <h4>Matrix A</h4>
-      <input type="text" value="1"> <!-- value must be = to what the user inputs -->
+      <h2>Matrix A</h2>
+      <input type="text" value="1">
   
       <!--Outputs here -->
-      <p>The four fundamental spaces of Matrix A are the following:The four fundamental spaces of Matrix A are the following:</p><br>
+      <p id="desc">The four fundamental spaces of Matrix A are the following:</p><br>
       <p>Column Space</p><br>
       
       <p>Null Space</p><br>
@@ -29,4 +40,9 @@
       <a href="input.html">Back to Calculator</a>
     </div>
   </body>
+
+    <footer>
+        <p id="group">Group 4 | BSCS 2-3</p>
+        <p id="members">Alegre | Inocentes | Rumbaoa | Velasco | Vinoya</p>
+    </footer>
 </html>
