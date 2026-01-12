@@ -1,14 +1,15 @@
 body {
     text-align: center;
-    background-image: url(OUTPUT\ BG.jpg);
+    background-image: url(images/OUTPUT\ BG.jpg);
     background-size: cover;
 }
 
-.card {
+.card1 {
     max-width: 1300px;
     min-height: 500px;
     padding: 12px;
     margin: 80px;
+    margin-bottom: 0;
     background-image: linear-gradient(to bottom, #FFFFFF, #E4E4E4);
     border-radius: 32px;
     box-shadow: 3px 3px 3px gray;
@@ -30,7 +31,7 @@ h2 {
     font-style: normal;
     font-size: 40px;
     font-weight: 700;
-    margin-bottom: 0;
+    margin-bottom: 20px;
     margin-top: 0;
 }
 
@@ -75,7 +76,7 @@ p {
 
 a {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 20px;
     background-color: black;
     color: white;
@@ -91,6 +92,57 @@ a {
     text-decoration: none;
     margin-right: 30px;
 }
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+/* Base styling for every card */
+.card {
+    width: 200px;
+    height: 60px;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.card:hover {
+    cursor: pointer;
+    transition: transform 0.2s;
+    transform: scale(1.05);
+    color: black;
+}
+
+.card h2{
+    font-family: "PT Serif", serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 27px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.card p{
+    font-family: "PT Serif", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    margin-top: 7px;
+}
+
+/* Specific Card Colors */
+.yellow { background-color: #fdf57d; }
+.red    { background-color: #f2807c; }
+.blue   { background-color: #8ed2f5; }
+.purple { background-color: #c98cf5; }
 
 a:hover {
     transform: scale(1.05);
