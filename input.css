@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    background-image: url(MATRIX\ GENERATOR\ BG.jpg);
+    background-image: url(images/INPUT\ VALUES\ BG.jpg);
     background-size: cover;
 }
 
@@ -9,6 +9,7 @@ body {
     min-height: 500px;
     padding: 12px;
     margin: 80px;
+    margin-bottom: 45;
     background-image: linear-gradient(to bottom, #FFFFFF, #E4E4E4);
     border-radius: 32px;
     box-shadow: 3px 3px 3px gray;
