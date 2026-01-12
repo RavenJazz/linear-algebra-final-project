@@ -1,0 +1,92 @@
+body {
+    text-align: center;
+    background-image: url(INPUT\ VALUES\ BG.jpg);
+    background-size: cover;
+}
+
+.card {
+    width: 1300px;
+    height: 500px;
+    padding: 12px;
+    margin: 80px;
+    background-image: linear-gradient(to bottom, #FFFFFF, #E4E4E4);
+    border-radius: 32px;
+    box-shadow: 3px 3px 3px gray;
+}
+
+h1 {
+    text-align: center;
+    font-family: "PT Serif", serif;
+    font-style: normal;
+    font-size: 70px;
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+#desc {
+    text-align: center;    
+    font-family: "Pridi", serif;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 30px;
+    margin-bottom: 65px;
+    margin-top: 0;
+}
+
+.content {
+    font-family: "Pridi", serif;
+    font-style: normal;
+    font-size: 30px;
+    font-weight: 20px;
+    text-align: left;
+}
+
+input {
+    width: 40px;
+    height: 30px;
+    border: 2px solid gray;
+    border-radius: 11px;
+    margin-bottom: 11px;
+    padding: 10px;
+    background-color: #F8F8F8;
+}
+
+a {
+    display: inline-block;
+    margin-top: 65px;
+    background-color: black;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+    font-family: "PT Serif", serif;
+    font-style: normal;
+    font-weight: 200;
+}
+
+a:hover {
+    transform: scale(1.05);
+    background-color: #6EE48C;
+    color: black;
+}
+
+footer {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-family: "Pridi", serif;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 10px;
+}
+
+#group {
+    float: left;
+}
+
+#members {
+    float: right;
+}
