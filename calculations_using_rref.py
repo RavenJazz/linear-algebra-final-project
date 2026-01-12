@@ -92,7 +92,13 @@ def load_matrix_and_display():
     # 4. Helper to format for display
     def pretty_print(arr):
         if arr.size == 0: return "None (Zero Vector Only)"
-        return np.array2string(np.round(arr, 2), separator=', ')
+        return np.array2string(
+            arr, 
+            precision=2, 
+            separator=', ', 
+            suppress_small=True,
+            formatter={'float_kind':lambda x: "%g" % x} # %g removes trailing zeros/dots
+        )
 
     # 5. DISPLAY results to your HTML IDs
     display(pretty_print(A), target="matrix-input")
